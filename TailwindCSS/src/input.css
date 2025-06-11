@@ -2,4 +2,4 @@
 
 /* tailwindcss掃描HTML文件的目錄 */
 @source "../../*.html";
-@source "../../scripts/*.js";
+/*@source "../../scripts/*.js";*/

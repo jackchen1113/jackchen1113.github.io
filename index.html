@@ -1,5 +1,6 @@
 <!doctype html>
-<html>
+<html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,335 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2908997854755393"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <title>帝大工程師的隨手筆記</title>
 </head>
+
+<header class="bg-red-800 z-1" x-data="dropdown">
+  <div>
+    <nav class="mx-auto flex max-w-7xl  items-center justify-between p-3 lg:px-4 " aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="https://jackchen1113.github.io/" class="-m-1.5 p-1.5">
+          <span class="sr-only">帝大工程師的隨手筆記</span>
+          <img class="h-12 w-12" src="./Images/LOGO.png" alt="Logo">
+        </a>
+        <div
+          class="flex-auto text-gray-200 pl-2 pr-2 text-left self-center items-center justify-center  mx-auto font-bold leading-6 text-xl lg:text-3xl  hidden md:block">
+          帝大工程師的隨手筆記</div>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ">
+          <span class="sr-only">打開選單 Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true" @click="toggle">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12 ">
+
+
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="./index_travel.html" class="text-gray-200 text-sm font-semibold leading-6 ">旅遊手札</a>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-12">
+          <div class="relative" x-data="{open:false}">
+            <button type="button" class="flex text-gray-200 items-center gap-x-1 text-sm font-semibold leading-6 "
+              aria-expanded="false" @click="open= !open" @click.away="open= false">
+              t1
+              <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                :class="{ 'rotate-180': open }">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div
+              class="absolute lg:right-0 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+              x-show="open" x-collapse>
+              <div class="p-4">
+
+                <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-red-50">
+                  <div
+                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white group-hover:text-red-600">
+                    <svg class="h-5 w-4" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                      viewBox="0 0 48 48">
+                      <path fill="#ffb74d" d="M10 12c-2.8 0-5-2.2-5-5s2.2-5 5-5s5 2.2 5 5s-2.2 5-5 5" />
+                      <path fill="#607d8b" d="M2 22v8l3 2l1 14h8l1-14l3-2v-8c0-4.4-3.6-8-8-8s-8 3.6-8 8" />
+                      <g fill="#263238">
+                        <path
+                          d="M22.4 40.4c-.6 2.5-1 3.6-2.4 3.6c-.6 0-1.2-.5-1.9-1.1c-1-.8-2.2-1.9-4.1-1.9v2c1.1 0 1.9.7 2.8 1.4S18.7 46 20 46c3.1 0 3.8-2.9 4.4-5.2c.6-2.6 1-3.8 2.6-3.8v-2c-3.3 0-4.1 3.1-4.6 5.4" />
+                        <path d="M14.4 40H10v4h4.1z" />
+                      </g>
+                      <circle cx="36" cy="36" r="10" fill="#4caf50" />
+                      <path fill="#fff"
+                        d="M35 34c.1.2.1.3.3.4c.1.1.3.2.5.4c.2.1.5.2.8.3c.5.2.9.4 1.3.6s.7.4 1 .7s.5.6.7.9c.2.4.2.8.2 1.3c0 .4-.1.8-.2 1.2q-.15.6-.6.9q-.45.45-.9.6q-.6.3-1.2.3v1.5h-1.2v-1.5q-.6 0-1.2-.3c-.4-.2-.7-.4-1-.6c-.3-.3-.5-.6-.7-1.1q-.3-.6-.3-1.5h2.2c0 .4 0 .7.1.9s.2.4.4.6c.2.1.3.2.5.3s.4.1.6.1s.4 0 .6-.1s.3-.2.4-.3s.2-.3.3-.4c.1-.2.1-.3.1-.5s0-.4-.1-.6s-.1-.3-.3-.4c-.1-.1-.3-.3-.5-.4s-.4-.2-.7-.3c-.5-.2-.9-.4-1.3-.6s-.7-.4-1-.7s-.5-.6-.7-.9c-.2-.4-.2-.8-.2-1.3c0-.4.1-.8.2-1.2c.1-.3.3-.7.6-.9q.45-.45.9-.6q.6-.3 1.2-.3v-1.6H37v1.6c.4.1.8.2 1.2.4s.6.4.9.7c.2.3.4.6.6 1c.1.4.2.9.2 1.4h-2.2c0-.6-.1-1-.4-1.3c-.2-.3-.6-.4-1-.4c-.2 0-.4 0-.6.1s-.3.2-.4.3q-.3 0-.3.3c0 .3-.1.3-.1.5s0 .4.1.5" />
+                    </svg>
+                  </div>
+                  <div class="flex-auto">
+                    <a href="" class="block font-semibold ">
+                      t1
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 ">t1</p>
+                  </div>
+                </div>
+
+
+
+                <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-red-50">
+                  <div
+                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <svg class="h-6 w-6 group-hover:text-red-600" xmlns="http://www.w3.org/2000/svg" width="1em"
+                      height="1em" viewBox="0 0 48 48">
+                      <path fill="#90caf9" d="M36 13V9H22v13h-9v4h9v13h14v-4H26v-9h10v-4H26v-9z" />
+                      <path fill="#d81b60" d="M6 17h10v14H6z" />
+                      <path fill="#2196f3" d="M32 6h10v10H32zm0 26h10v10H32zm0-13h10v10H32z" />
+                    </svg>
+                  </div>
+                  <div class="flex-auto">
+                    <a href=""
+                      class="block font-semibold ">
+                      t2
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 ">t2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                <a href="" target="_blank"
+                  class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6  hover:bg-red-100">
+                  <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Moodle
+                </a>
+                <a href=""
+                  class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-red-100">
+                  <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  聯絡我們
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-12">
+          <div class="relative" x-data="{open:false}">
+            <button type="button" class="flex text-gray-200 items-center gap-x-1 text-sm font-semibold leading-6 "
+              aria-expanded="false" @click="open= !open" @click.away="open= false">
+              test
+              <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                :class="{ 'rotate-180': open }">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div
+              class="absolute lg:right-0 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+              x-show="open" x-collapse>
+              <div class="p-4">
+                <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-red-50">
+                  <div
+                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <svg class="h-6 w-6 group-hover:text-red-600" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      width="1em" height="1em" viewBox="0 0 48 48">
+                      <path fill="#90caf9" d="M40,45H8V3h22l5,5l5,5V45z"></path>
+                      <line x1="16" x2="33" y1="22" y2="22" fill="none" stroke="#1976d2" stroke-miterlimit="10"
+                        stroke-width="2"></line>
+                      <line x1="16" x2="29" y1="26" y2="26" fill="none" stroke="#1976d2" stroke-miterlimit="10"
+                        stroke-width="2"></line>
+                      <line x1="16" x2="33" y1="30" y2="30" fill="none" stroke="#1976d2" stroke-miterlimit="10"
+                        stroke-width="2"></line>
+                      <line x1="16" x2="29" y1="34" y2="34" fill="none" stroke="#1976d2" stroke-miterlimit="10"
+                        stroke-width="2"></line>
+                      <g>
+                        <path fill="#e1f5fe" d="M38.5,14H29V4.5l4.8,4.8L38.5,14z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="flex-auto">
+                    <a href="" class="block font-semibold ">
+                      s1
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1">s1</p>
+                  </div>
+                </div>
+
+
+
+                <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-red-50">
+                  <div
+                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <svg class="h-6 w-6 group-hover:text-red-600" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      width="1em" height="1em" viewBox="0 0 48 48">
+                      <path fill="#424242"
+                        d="M27,7h-6c-1.7,0-3,1.3-3,3v3h2v-3c0-0.6,0.4-1,1-1h6c0.6,0,1,0.4,1,1v3h2v-3C30,8.3,28.7,7,27,7z">
+                      </path>
+                      <path fill="#E65100"
+                        d="M40,43H8c-2.2,0-4-1.8-4-4V15c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v24C44,41.2,42.2,43,40,43z">
+                      </path>
+                      <path fill="#FF6E40"
+                        d="M40,28H8c-2.2,0-4-1.8-4-4v-9c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v9C44,26.2,42.2,28,40,28z">
+                      </path>
+                      <path fill="#FFF3E0"
+                        d="M26,26h-4c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1v2C27,25.6,26.6,26,26,26z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="flex-auto">
+                    <a href=""
+                      class="block font-semibold ">
+                      s2
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 ">s2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                <a href="" target="_blank"
+                  class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6  hover:bg-red-100">
+                  <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Moodle
+                </a>
+                <a href=""
+                  class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-red-100">
+                  <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  聯絡我們
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true" x-show="open" x-collapse>
+      <div class="fixed inset-0 z-10"></div>
+      <div
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-3 py-3 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+
+          <a href="https://jackchen1113.github.io/" class="">
+            <span class="sr-only">帝大工程師的隨手筆記</span>
+            <img class="h-5 w-5" src="./Images/LOGO.png" alt="Logo">
+          </a>
+          <button type="button" class="m-2.5 rounded-md p-2.5 ">
+            <span class="sr-only">關閉選單 Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" @click="toggle">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="./index_travel.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"> 旅遊手札 </a>
+
+              <div class="-mx-3" x-data="{ open: false }">
+                <button type="button"
+                  class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7  hover:bg-gray-50"
+                  aria-controls="disclosure-1" aria-expanded="false" @click="open= !open" @click.away="open= false">
+                  t1
+                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                    :class="{ 'rotate-180': open }">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div class="mt-2 space-y-2" id="disclosure-1" x-show="open" x-collapse>
+                  <a href=""
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50">tm1</a>
+                  <a href=""
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7  hover:bg-gray-50">tm2</a>
+                </div>
+              </div>
+
+              <div class="-mx-3" x-data="{ open: false }">
+                <button type="button"
+                  class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7  hover:bg-gray-50"
+                  aria-controls="disclosure-1" aria-expanded="false" click="open= !open" @click.away="open= false">
+                  t2
+                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                    :class="{ 'rotate-180': open }">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div class="mt-2 space-y-2" id="disclosure-1" x-show="open" x-collapse>
+                  <a href=""
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7  hover:bg-gray-50">t1</a>
+                  <a href=""
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7  hover:bg-gray-50">t2</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
 <body>
   <h1 class="text-3xl text-red-800 font-bold underline">
     Hello world!
   </h1>
 </body>
+
+
+<footer class="bg-red-800 text-gray-200 ">
+    <div class="h-full mx-auto max-w-7xl p-4 ">
+        <div class="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+            <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
+                <li>
+                    <a href="" target="_blank"
+                       class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-100 focus:text-pink-500">
+                        聯絡我們
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 </html>
 
 
 
 <script>
+  document.addEventListener('alpine:init', () => {
+      Alpine.data('dropdown', () => ({
+        open: false,
+        toggle() {
+          this.open = !this.open;
+        }
+      }))
+    })
   const { animate } = anime;
 </script>
