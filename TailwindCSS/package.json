@@ -1,9 +1,14 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.8",
+    "alpinejs": "^3.15.2",
+    "esbuild": "^0.27.0",
+    "eslint": "^9.39.1",
+    "sortablejs": "^1.15.6",
     "tailwindcss": "^4.1.8"
-  } ,
+  },
   "scripts": {
-   "build-css": "npx @tailwindcss/cli -i ./src/input.css -o ../css/style.css"
- }
+    "build-css": "npx @tailwindcss/cli -i ./src/input.css -o ../css/style.css",
+     "build-js": "npx esbuild src/input.js --outfile=../scripts/scripts.js --bundle"
+  }
 }
